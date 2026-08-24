@@ -16,6 +16,10 @@ app.get("/cats", (req, res) => {
   res.send("This is cats page");
 });
 
+app.post("/cats", (req, res) => {
+  res.send("This is cats page from homepage");
+});
+
 app.get("/about", (req, res) => {
   res.send("This isi about page");
 });
