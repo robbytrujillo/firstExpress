@@ -33,6 +33,7 @@ app.use((req, res) => {
   res.status(404).send("Page Not Found");
 });
 
+// Server Running
 app.listen(8080, () => {
   console.log("Server is running on port http://localhost:8080");
 });
