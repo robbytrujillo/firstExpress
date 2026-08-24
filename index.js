@@ -20,11 +20,11 @@ app.get("/about", (req, res) => {
   res.send("This isi about page");
 });
 
+// 404 handler
 // app.get("*", (req, res) => {
 //   res.send("Page Not Found");
 // });
 
-// 404 handler
 app.use((req, res) => {
   res.status(404).send("Page Not Found");
 });
