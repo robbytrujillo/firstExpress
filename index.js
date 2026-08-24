@@ -20,6 +20,15 @@ app.get("/about", (req, res) => {
   res.send("This isi about page");
 });
 
+// app.get("*", (req, res) => {
+//   res.send("Page Not Found");
+// });
+
+// 404 handler
+app.use((req, res) => {
+  res.status(404).send("Page Not Found");
+});
+
 app.listen(8080, () => {
   console.log("Server is running on port http://localhost:8080");
 });
