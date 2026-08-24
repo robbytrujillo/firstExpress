@@ -1,11 +1,23 @@
 const express = require("express");
 const app = express();
 
-app.use((req, res) => {
-  console.log("we got request");
-  // console.dir(res);
-  // res.send("<h1>Hello Express</h1>");
-  res.send({ message: "Hello World" });
+// app.use((req, res) => {
+//   console.log("we got request");
+//   // console.dir(res);
+//   // res.send("<h1>Hello Express</h1>");
+//   res.send({ message: "Hello World" });
+// });
+
+app.get("/", (req, res) => {
+  res.send("This is homepage");
+});
+
+app.get("/cats", (req, res) => {
+  res.send("This is cats page");
+});
+
+app.get("/about", (req, res) => {
+  res.send("This isi about page");
 });
 
 app.listen(8080, () => {
