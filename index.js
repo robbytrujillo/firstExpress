@@ -27,6 +27,7 @@ app.get("/about", (req, res) => {
 // domain.com/blog/....
 // route
 app.get("/blog/:judul", (req, res) => {
+  console.log(req.params);
   res.send("This is a blog page");
 });
 
