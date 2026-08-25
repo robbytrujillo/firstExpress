@@ -32,6 +32,12 @@ app.get("/blog/:judul", (req, res) => {
   res.send(`Kita sedang melihat postingan dengan judul: ${judul}`);
 });
 
+app.get("/blog/:category/:judul/:author", (req, res) => {
+  // console.log(req.params);
+  const { category, judul, author } = req.params;
+  res.send(`Blog dengan kategori: ${category} | author: ${author} | ${judul}`);
+});
+
 // 404 handler
 // app.get("*", (req, res) => {
 //   res.send("Page Not Found");
