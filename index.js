@@ -32,6 +32,11 @@ app.get("/blog/:judul", (req, res) => {
   res.send(`Kita sedang melihat postingan dengan judul: ${judul}`);
 });
 
+// Query String
+app.get("/search", (req, res) => {
+  console.log(req.query);
+});
+
 app.get("/blog/:category/:judul/:author", (req, res) => {
   // console.log(req.params);
   const { category, judul, author } = req.params;
