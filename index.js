@@ -27,8 +27,9 @@ app.get("/about", (req, res) => {
 // domain.com/blog/....
 // route
 app.get("/blog/:judul", (req, res) => {
-  console.log(req.params);
-  res.send("This is a blog page");
+  // console.log(req.params);
+  const { judul } = req.params;
+  res.send(`Kita sedang melihat postingan dengan judul: ${judul}`);
 });
 
 // 404 handler
