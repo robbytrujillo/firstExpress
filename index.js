@@ -36,9 +36,13 @@ app.get("/blog/:judul", (req, res) => {
 app.get("/search", (req, res) => {
   // console.log(req.query);
   const { q } = req.query;
+  if (!q) {
+    res.send(`<h1>Tidak ada data yang dicari..</h1>`);
+  }
   res.send(`<h1>Search Keyword : ${q}</h1>`);
 });
 
+// route blog
 app.get("/blog/:category/:judul/:author", (req, res) => {
   // console.log(req.params);
   const { category, judul, author } = req.params;
