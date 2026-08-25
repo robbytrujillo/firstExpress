@@ -34,7 +34,9 @@ app.get("/blog/:judul", (req, res) => {
 
 // Query String
 app.get("/search", (req, res) => {
-  console.log(req.query);
+  // console.log(req.query);
+  const { q } = req.query;
+  res.send(`<h1>Search Keyword : ${q}</h1>`);
 });
 
 app.get("/blog/:category/:judul/:author", (req, res) => {
