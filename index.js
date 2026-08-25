@@ -24,6 +24,12 @@ app.get("/about", (req, res) => {
   res.send("This isi about page");
 });
 
+// domain.com/blog/....
+// route
+app.get("/blog/:judul", (req, res) => {
+  res.send("This is a blog page");
+});
+
 // 404 handler
 // app.get("*", (req, res) => {
 //   res.send("Page Not Found");
