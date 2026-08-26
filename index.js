@@ -9,7 +9,8 @@ const app = express();
 // });
 
 app.get("/", (req, res) => {
-  res.send("This is homepage");
+  // res.send("Homepage");
+  res.send(`<h1>This is homepage with Heading 1</h1>`);
 });
 
 app.get("/cats", (req, res) => {
